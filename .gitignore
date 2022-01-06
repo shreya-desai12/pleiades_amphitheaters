@@ -132,6 +132,7 @@ venv.bak/
 
 # direnv
 .direnv
+.envrc 
 
 # elliott stuff
 *.bak
