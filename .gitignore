@@ -138,8 +138,8 @@ venv.bak/
 *.bak
 *_cache.sqlite
 *.xpr
-package_template_3.py
-script_template_3.py
+# package_template_3.py
+# script_template_3.py
 test_template_3.py
 cover
 ~$*.docx
