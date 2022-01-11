@@ -134,12 +134,15 @@ venv.bak/
 .direnv
 .envrc 
 
+# visual studio
+.vs
+
 # elliott stuff
 *.bak
 *_cache.sqlite
 *.xpr
 # package_template_3.py
 # script_template_3.py
-test_template_3.py
+# test_template_3.py
 cover
 ~$*.docx
