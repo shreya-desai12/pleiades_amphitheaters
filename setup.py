@@ -17,6 +17,6 @@ setuptools.setup(
         "License :: OSI Approved :: GNU Affero General Public License v3",
         "Operating System :: OS Independent",
     ],
-    install_requires=['airtight'],
+    install_requires=['airtight', 'requests'],
     python_requires='>=3.10.1'
 )
