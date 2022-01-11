@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 setuptools.setup(
     name="pleiades_amphitheaters",
     version="0.0.1",
-    author="Tom Elliott",
+    author="Tom Elliott, Shreya Dessai, Ravikanth Gundala",
     author_email="tom.elliott@nyu.edu",
     description="Code for collating Sebastian Heath's Roman Amphitheaters dataset with the Pleiades gazetteer of ancient places.",
     long_description=long_description,
