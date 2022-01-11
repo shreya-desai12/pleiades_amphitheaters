@@ -145,4 +145,5 @@ venv.bak/
 # script_template_3.py
 # test_template_3.py
 cover
+htmlcov
 ~$*.docx
