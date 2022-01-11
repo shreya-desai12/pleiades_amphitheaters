@@ -5,7 +5,7 @@ import requests
 
 class Data:
     def read(self):
-        response = requests.get('https://pleiades.stoa.org/places/39414/')
+        response = requests.get('https://pleiades.stoa.org/places/39414/json')
         if response.status_code == 200:
             json_data = response.json()
             return json_data
