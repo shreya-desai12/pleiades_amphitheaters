@@ -10,7 +10,7 @@ from unittest import TestCase
 
 logger = logging.getLogger(__name__)
 
-class Test_ParseData(TestCase):
+class Test_AmphitheaterData(TestCase):
 
     def test_parse(self):
         parser = AmphitheaterData()
