@@ -19,3 +19,8 @@ class Test_PleiadesData(TestCase):
         print(d['@type'])
         assert d['@type'] == 'Place'
 
+    def test_not_pleiades(self):
+        parser = PleiadesData()
+        with self.assertRaises(ValueError):
+            parser.read_data(uri='http://nowhere.com')
+

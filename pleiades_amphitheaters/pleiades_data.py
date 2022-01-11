@@ -15,4 +15,8 @@ class PleiadesData(DataFetcher):
         self,
         uri: str
     ):
+        base_uri = 'https://pleiades.stoa.org/places/'
+        if not uri.startswith(base_uri):
+            raise ValueError(
+                f'Expected a Pleiades URI starting with {base_uri}. Got {uri}.')
         return DataFetcher.read_data(self, uri=uri)
