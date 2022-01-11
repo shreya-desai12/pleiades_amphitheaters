@@ -4,26 +4,22 @@
 Fetch data from sfheath's Github repository URI
 """
 
-import requests
+from pleiades_amphitheaters.data import DataFetcher
 
-class ParseData:
+class AmphitheaterData(DataFetcher):
     """
     Fetch sfheath amphitheater data over the web and return parsed JSON.
     """
 
-    def read_data(self):
+    def read_data(
+        self,
+        uri='https://raw.githubusercontent.com/roman-amphitheaters/roman-amphitheaters/main/roman-amphitheaters.geojson'
+    ):
         """
-        Perform fetch and parse.
+        Perform fetch and parse of sfheath amphitheater data.
         
         :returns: the fetched JSON data
         :rtype: dict or list
         """
-        response = requests.get('https://raw.githubusercontent.com/roman-amphitheaters/roman-amphitheaters/main/roman-amphitheaters.geojson')
-        if response.status_code == 200:
-            return response.json()
-        else:
-            response.raise_for_status()
-        
-rd = ParseData()
-final_data = rd.read_data()
+        return DataFetcher.read_data(self, uri=uri)
 
