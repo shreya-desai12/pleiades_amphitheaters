@@ -7,7 +7,7 @@ Fetch data from sfheath's Github repository URI
 import requests
 import json
 
-class Parse_data:
+class ParseData:
     def read_data(self):
         response = requests.get('https://raw.githubusercontent.com/roman-amphitheaters/roman-amphitheaters/main/roman-amphitheaters.geojson')
         if response.status_code == 200:
@@ -20,6 +20,6 @@ class Parse_data:
             print("Error in retrieving the data")
             return {}
         
-rd = Parse_data()
+rd = ParseData()
 final_data = rd.read_data()
 

@@ -6,7 +6,7 @@
 import logging
 from pathlib import Path
 from pprint import pprint
-from pleiades_amphitheaters.amphitheaters_data import Parse_data
+from pleiades_amphitheaters.amphitheaters_data import ParseData
 from unittest import TestCase
 
 logger = logging.getLogger(__name__)
@@ -34,7 +34,7 @@ class Test_ParseData(TestCase):
         pass
 
     def test_parse(self):
-        parser = Parse_data()
+        parser = ParseData()
         d = parser.read_data()
         assert isinstance(d, dict) == True
         assert len(d) == 7
