@@ -2,6 +2,7 @@
 
 import requests
 
+
 class Data:
     def read(self):
         response = requests.get('https://pleiades.stoa.org/places/39414/')
