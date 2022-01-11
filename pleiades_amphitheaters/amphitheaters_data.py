@@ -20,11 +20,9 @@ class ParseData:
         """
         response = requests.get('https://raw.githubusercontent.com/roman-amphitheaters/roman-amphitheaters/main/roman-amphitheaters.geojson')
         if response.status_code == 200:
-            # print(response.status_code)
             return response.json()
         else:
-            print("Error in retrieving the data")
-            return {}
+            response.raise_for_status()
         
 rd = ParseData()
 final_data = rd.read_data()
