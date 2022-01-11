@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 # -*- coding: utf-8 -*-
 """Nose tests for amphitheaters_data module."""
 
@@ -35,4 +36,11 @@ class Test_ParseData(TestCase):
     def test_parse(self):
         parser = Parse_data()
         d = parser.read_data()
-        pprint(d, indent=4)
+        assert isinstance(d, dict) == True
+        assert len(d) == 7
+        features = d['features']
+        assert isinstance(features, list)
+        assert len(features) == 267
+        for f in features:
+            assert f['type'] == 'Feature'
+
