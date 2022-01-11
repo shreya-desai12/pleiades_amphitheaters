@@ -19,6 +19,13 @@ class Test_PleiadesData(TestCase):
         print(d['@type'])
         assert d['@type'] == 'Place'
 
+    def test_parse_json_omitted(self):
+        parser = PleiadesData()
+        d = parser.read_data(uri='https://pleiades.stoa.org/places/39414')
+        assert isinstance(d, dict) == True
+        print(d['@type'])
+        assert d['@type'] == 'Place'
+
     def test_not_pleiades(self):
         parser = PleiadesData()
         with self.assertRaises(ValueError):
