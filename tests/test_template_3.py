@@ -3,7 +3,6 @@
 """Python 3 tests template (changeme)"""
 
 import logging
-from nose.tools import assert_equal, assert_false, assert_true, raises
 from pathlib import Path
 from unittest import TestCase
 
