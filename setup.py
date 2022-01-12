@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 setuptools.setup(
     name="pleiades_amphitheaters",
     version="0.0.1",
-    author="Tom Elliott",
+    author="Tom Elliott, Shreya Dessai, Ravikanth Gundala",
     author_email="tom.elliott@nyu.edu",
     description="Code for collating Sebastian Heath's Roman Amphitheaters dataset with the Pleiades gazetteer of ancient places.",
     long_description=long_description,
@@ -17,6 +17,6 @@ setuptools.setup(
         "License :: OSI Approved :: GNU Affero General Public License v3",
         "Operating System :: OS Independent",
     ],
-    install_requires=['airtight'],
+    install_requires=['airtight', 'requests'],
     python_requires='>=3.10.1'
 )
